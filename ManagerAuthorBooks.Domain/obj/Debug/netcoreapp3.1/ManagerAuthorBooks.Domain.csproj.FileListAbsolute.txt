@@ -1,0 +1,16 @@
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.deps.json
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.dll
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.csprojAssemblyReference.cache
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.AssemblyInfoInputs.cache
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.AssemblyInfo.cs
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.pdb
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.dll
+D:\@Estudos\ProvaWorthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.pdb
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.csprojAssemblyReference.cache
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.AssemblyInfoInputs.cache
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.AssemblyInfo.cs
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.dll
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.pdb
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.deps.json
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.dll
+D:\@Estudos\ProvaWorthix\Antigo2\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\bin\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.pdb
