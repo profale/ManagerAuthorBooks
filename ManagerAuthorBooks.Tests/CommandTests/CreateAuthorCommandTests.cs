@@ -9,8 +9,8 @@ namespace ManagerAuthorBooks.Tests.CommandTests
     [TestClass]
     public class CreateAuthorCommandTests
     {
-        private readonly CreateAuthorCommand _invalidCommand = new CreateAuthorCommand("", DateTime.Now, "", null);
-        private readonly CreateAuthorCommand _validCommand = new CreateAuthorCommand("Alessandra Ferreira", new DateTime(1981, 6, 25), "09543237778", null);
+        private readonly CreateAuthorCommand _invalidCommand = new CreateAuthorCommand("", DateTime.Now, "");
+        private readonly CreateAuthorCommand _validCommand = new CreateAuthorCommand("Alessandra Ferreira", new DateTime(1981, 6, 25), "09543237778");
 
         public CreateAuthorCommandTests()
         {

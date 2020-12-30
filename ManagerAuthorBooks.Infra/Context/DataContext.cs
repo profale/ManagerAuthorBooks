@@ -1,4 +1,5 @@
 ﻿using ManagerAuthorBooks.Domain.Entities;
+using ManagerAuthorBooks.Infra.Mappings;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace ManagerAuthorBooks.Infra.Context
     {
         public DbSet<Author> Authors { get; set; }
         public DbSet<Books> Books { get; set; }
-
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
             
@@ -20,8 +20,14 @@ namespace ManagerAuthorBooks.Infra.Context
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging(true);
-            optionsBuilder.UseSqlServer("");
+            
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AuthorMap());
+            modelBuilder.ApplyConfiguration(new BooksMap());
 
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ManagerAuthorBooks.API\ManagerAuthorBooks.API.csproj" />
     <ProjectReference Include="..\ManagerAuthorBooks.Domain\ManagerAuthorBooks.Domain.csproj" />
+    <ProjectReference Include="..\ManagerAuthorBooks.Infra\ManagerAuthorBooks.Infra.csproj" />
   </ItemGroup>
 
 </Project>

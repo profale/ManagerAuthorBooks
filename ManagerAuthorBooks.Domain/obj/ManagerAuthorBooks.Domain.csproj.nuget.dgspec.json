@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {}
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {}
   },
   "projects": {
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
+        "projectUniqueName": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
         "projectName": "ManagerAuthorBooks.Domain",
-        "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
+        "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
         "packagesPath": "C:\\Users\\Alessandra\\.nuget\\packages\\",
-        "outputPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\obj\\",
+        "outputPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Alessandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -45,6 +42,10 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
@@ -60,6 +61,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

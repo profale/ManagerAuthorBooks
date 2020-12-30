@@ -18,13 +18,15 @@ namespace ManagerAuthorBooks.Domain.Handlers
         IHandler<UpdateAuthorCommand>
     {
         private readonly IAuthorRepository _authorRepository;
-        private IMediatorHandler bus;
+        private IMediatorHandler _bus;
         private readonly IMapper _mapper;
         
 
-        public AuthorHandler(IAuthorRepository authorRepository)
+        public AuthorHandler(IAuthorRepository authorRepository, IMapper mapper, IMediatorHandler bus)
         {
             _authorRepository = authorRepository;
+            _mapper = mapper;
+            _bus = bus;
         }
 
         public ICommandResult Handle(CreateAuthorCommand command)
@@ -32,19 +34,17 @@ namespace ManagerAuthorBooks.Domain.Handlers
             //FAIL FAST VALIDATION
             command.Validate();
             if (command.Invalid)
-                return new GenericCommandResult(false, "Ocorreu um erro ao salvar o registro solicitado", command.Notifications);
+                return new GenericCommandResult(false, "An error occurred while saving the requested record", command.Notifications);
 
-            var mapAuthor = _mapper.Map<CreateAuthorCommand, Author>(command);
-            //Gerar o Author
-            var author = new Author(mapAuthor.Name, mapAuthor.DateOfBirthday, mapAuthor.Document, mapAuthor.Books);
+            var author = _mapper.Map<CreateAuthorCommand,Author>(command);
 
-            //Salvar no banco
+            //Save the Database
             _authorRepository.Create(author);
 
-            //enviar mensagem para fila
-            bus.Enqueue(command, CreateAuthorCommand.QueueName);
+            //Send message to queue
+            _bus.Enqueue(command, CreateAuthorCommand.QueueName);
 
-            return new GenericCommandResult(true, "O Author foi salvo com sucesso", author);
+            return new GenericCommandResult(true, $"The Author {author.Name} was save with success", author);
         }
 
         public ICommandResult Handle(UpdateAuthorCommand command)
@@ -52,25 +52,22 @@ namespace ManagerAuthorBooks.Domain.Handlers
             //FAIL FAST VALIDATION
             command.Validate();
             if (command.Invalid)
-                return new GenericCommandResult(false, "Ocorreu um erro ao atualizar o registro solicitado", command.Notifications);
+                return new GenericCommandResult(false, "An error occurred while updating the requested record", command.Notifications);
 
-            //Recuperar Author do Banco
-            var author = _authorRepository.GetById(command.Id);
+            //Retrieve Author from Database
+            var author = _authorRepository.GetById(command.Id).Result;
 
             var mapAuthor = _mapper.Map<UpdateAuthorCommand, Author>(command);
-            
-            //Atualizar os dados no banco
-            author.UpdateAuthor(mapAuthor.Id, mapAuthor.Name, mapAuthor.DateOfBirthday, mapAuthor.Document, mapAuthor.Books);
 
-            //Salvar no banco
+            //Update the data in the database
+            author.UpdateAuthor(mapAuthor.Id, mapAuthor.Name, mapAuthor.DateOfBirthday, mapAuthor.Document);
+
             _authorRepository.Update(author);
 
-            //Enviar mensagem para fila
-            bus.Enqueue(command, UpdateAuthorCommand.QueueName);
+            //Send message to queue
+            _bus.Enqueue(command, UpdateAuthorCommand.QueueName);
 
-            return new GenericCommandResult(true, "O Author foi atualizado com sucesso", author);
+            return new GenericCommandResult(true, $"The author {author.Name} has been updated successfully", author);
         }
-
-        
     }
 }

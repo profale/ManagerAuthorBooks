@@ -20,7 +20,17 @@ namespace ManagerAuthorBooks.Domain.Entities
         public DateTime ReleaseDate { get; private set; }
         public string ISBN { get; private set; }
         public string Category { get; private set; }
+        public Guid AuthorId { get; set; }
         public Author Author { get; private set; }
+
+        public void UpdateBook(string title, DateTime releaseDate, string isbn, string category, Guid authorId)
+        {
+            Title = title;
+            ReleaseDate = releaseDate;
+            ISBN = isbn;
+            Category = category;
+            AuthorId = authorId;
+        }
 
     }
 }

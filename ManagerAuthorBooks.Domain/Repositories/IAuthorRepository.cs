@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ManagerAuthorBooks.Domain.Repositories
 {
@@ -9,6 +10,8 @@ namespace ManagerAuthorBooks.Domain.Repositories
     {
         void Create(Author author);
         void Update(Author author);
-        Author GetById(Guid id);
+        Task<Author> GetById(Guid id);
+        Task<IEnumerable<Author>> GetAll();
+
     }
 }

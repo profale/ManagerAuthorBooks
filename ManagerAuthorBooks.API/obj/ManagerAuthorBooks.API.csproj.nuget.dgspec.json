@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj": {}
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj": {}
   },
   "projects": {
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj": {
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj",
+        "projectUniqueName": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj",
         "projectName": "ManagerAuthorBooks.API",
-        "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj",
+        "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\ManagerAuthorBooks.API.csproj",
         "packagesPath": "C:\\Users\\Alessandra\\.nuget\\packages\\",
-        "outputPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\obj\\",
+        "outputPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Alessandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -30,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
-                "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj"
+              "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
+                "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj"
               },
-              "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj": {
-                "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj"
+              "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj": {
+                "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj"
               }
             }
           }
@@ -51,6 +48,36 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
             }
           },
           "imports": [
@@ -63,6 +90,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -75,18 +108,15 @@
         }
       }
     },
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
+        "projectUniqueName": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
         "projectName": "ManagerAuthorBooks.Domain",
-        "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
+        "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj",
         "packagesPath": "C:\\Users\\Alessandra\\.nuget\\packages\\",
-        "outputPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\obj\\",
+        "outputPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Alessandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -116,6 +146,10 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
@@ -131,6 +165,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -140,18 +180,15 @@
         }
       }
     },
-    "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj": {
+    "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj",
+        "projectUniqueName": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj",
         "projectName": "ManagerAuthorBooks.Infra",
-        "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj",
+        "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\ManagerAuthorBooks.Infra.csproj",
         "packagesPath": "C:\\Users\\Alessandra\\.nuget\\packages\\",
-        "outputPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\obj\\",
+        "outputPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Infra\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Alessandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -166,8 +203,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
-                "projectPath": "D:\\@Estudos\\ProvaWorthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj"
+              "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj": {
+                "projectPath": "D:\\@Estudos\\profale\\Worthix\\ManagerAuthorBooks\\ManagerAuthorBooks\\ManagerAuthorBooks.Domain\\ManagerAuthorBooks.Domain.csproj"
               }
             }
           }
@@ -189,6 +226,12 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.2.1, )"
@@ -204,6 +247,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

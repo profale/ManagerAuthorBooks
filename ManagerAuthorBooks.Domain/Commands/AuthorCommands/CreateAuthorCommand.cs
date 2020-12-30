@@ -13,28 +13,27 @@ namespace ManagerAuthorBooks.Domain.Commands.AuthorCommands
     {
         public const string QueueName = "create-author-command-queue";
         public CreateAuthorCommand() { }
-        public CreateAuthorCommand(string name, DateTime dateOfBirthday, string document, IEnumerable<CreateBooksCommand> books)
+        public CreateAuthorCommand(string name, DateTime dateOfBirthday, string document)
         {
             Name = name;
             DateOfBirthday = dateOfBirthday;
             Document = document;
-            Books = books;
         }
 
         public string Name { get; set; }
         public DateTime DateOfBirthday { get; set; }
         public string Document { get; set; }
 
-        public IEnumerable<CreateBooksCommand> Books { get; set; } = null;
+        public IEnumerable<CreateBooksCommand> Books { get; set; }
 
         public void Validate()
         {
             AddNotifications(
                 new Contract()
                     .Requires()
-                    .HasMinLen(Name, 3, "Name", "O nome deve ter mais de 3 caracteres")
-                    .IsFalse(ValidatedDocument.IsValid(Document), "Document", "Número de documento inválido")
-                    .IsFalse(ValidatedDateOfBirthday.IsValidDateOfBirthday(DateOfBirthday), "DateOfBirthday", "O author deve possuir idade maior que 30 anos")
+                    .HasMinLen(Name, 3, "Name", "The name must be longer than 3 characters")
+                    .IsFalse(!ValidatedDocument.IsValid(Document), "Document", "Number of document is invalid")
+                    .IsFalse(!ValidatedDateOfBirthday.IsValidDateOfBirthday(DateOfBirthday), "DateOfBirthday", "The author must be over 30 years old")
            );
         }
         
