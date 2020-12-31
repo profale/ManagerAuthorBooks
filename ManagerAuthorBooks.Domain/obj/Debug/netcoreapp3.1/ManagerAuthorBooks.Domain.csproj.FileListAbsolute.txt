@@ -22,4 +22,3 @@ D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorB
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.csproj.CoreCompileInputs.cache
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.pdb
-D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.Domain\obj\Debug\netcoreapp3.1\ManagerAuthorBooks.Domain.csprojAssemblyReference.cache

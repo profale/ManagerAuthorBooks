@@ -25,6 +25,7 @@ namespace ManagerAuthorBooks.Domain.Entities
 
         public void UpdateAuthor(Guid id, string name, DateTime dateOfBirthday, string document)
         {
+            Id = id;
             Name = name;
             DateOfBirthday = dateOfBirthday;
             Document = document;

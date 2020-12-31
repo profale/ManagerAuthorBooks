@@ -1,0 +1,33 @@
+version: '3.4'
+
+networks:
+    product_manager-dev:
+        driver: bridge 
+
+services:
+    managerauthorbooks.api:
+        image: ${DOCKER_REGISTRY-}managerauthorbooksapi
+        depends_on:
+            - sql-server-db
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "9002:80"
+            - "443:443"
+        environment:      
+            DB_CONNECTION_STRING: "Server=sql-server-db;Database=ManageAuthorBooks;User=sa;Password=teste@123;"
+            ASPNETCORE_ENVIRONMENT: "Development"
+        networks:
+            - product_manager-dev
+
+    sql-server-db:
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        ports:
+            - "1433:1433"
+        container_name: projectauthorbooks
+        environment:
+            ACCEPT_EULA: Y
+            SA_PASSWORD: teste@123
+        networks:
+            - product_manager-dev 

@@ -25,6 +25,8 @@ using ManagerAuthorBooks.Domain.Handlers.Contracts;
 using ManagerAuthorBooks.Infra.Services;
 using ManagerAuthorBooks.Domain.Queries.Contracts;
 using ManagerAuthorBooks.Domain.Queries;
+using ManagerAuthorBooks.Domain.Cache.Contract;
+using ManagerAuthorBooks.Domain.Cache;
 
 namespace ManagerAuthorBooks.API
 {
@@ -40,18 +42,30 @@ namespace ManagerAuthorBooks.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Ativando o uso de cache via Redis
+            services.AddDistributedRedisCache(options =>
+            {
+                options.Configuration =
+                    Configuration.GetConnectionString("ConexaoRedis");
+                options.InstanceName = "TesteRedisCache";
+            });
+
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
             services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddScoped<IBookRepository, BooksRepository>();
+            services.AddScoped<ICacheRepository, CacheRepository>();
 
             services.AddScoped<AuthorHandler, AuthorHandler>();
-            //services.AddScoped<BooksHandler, BooksHandler>();
+            services.AddScoped<BooksHandler, BooksHandler>();
 
             services.AddScoped<IMediatorHandler, RabbitMQueue>();
             services.AddScoped<IAuthorQueries, AuthorQueries>();
+            services.AddScoped<IBookQueries, BookQueries>();
+
+            services.AddScoped<ICacheService, CacheService>();
 
            //var mappingConfig = new MapperConfiguration(mc =>
            // {

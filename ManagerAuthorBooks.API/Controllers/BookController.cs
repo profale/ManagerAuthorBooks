@@ -18,7 +18,7 @@ namespace ManagerAuthorBooks.API.Controllers
     {
         private readonly ILogger _logger;
         private readonly IBookQueries _queries;
-        public BookController(ILogger logger, IBookQueries queries)
+        public BookController(ILogger<BookController> logger, IBookQueries queries)
         {
             _logger = logger;
             _queries = queries;

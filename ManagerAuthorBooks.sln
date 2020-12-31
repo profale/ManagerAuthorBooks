@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-ManagerAuthorBooks.Infra"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-ManagerAuthorBooks.Tests", "4-ManagerAuthorBooks.Tests", "{CF7BC6A2-70CB-4092-B878-F70CF54E3CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerAuthorBooks.API", "ManagerAuthorBooks.API\ManagerAuthorBooks.API.csproj", "{B01D46A7-9E98-402D-A00F-4E27DE1EB5F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerAuthorBooks.API", "ManagerAuthorBooks.API\ManagerAuthorBooks.API.csproj", "{B01D46A7-9E98-402D-A00F-4E27DE1EB5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerAuthorBooks.Domain", "ManagerAuthorBooks.Domain\ManagerAuthorBooks.Domain.csproj", "{CBC911E5-C7B5-4B6F-BAF4-A835FE8C6398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerAuthorBooks.Domain", "ManagerAuthorBooks.Domain\ManagerAuthorBooks.Domain.csproj", "{CBC911E5-C7B5-4B6F-BAF4-A835FE8C6398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerAuthorBooks.Infra", "ManagerAuthorBooks.Infra\ManagerAuthorBooks.Infra.csproj", "{3A6DCA8C-048F-411A-B1FC-C4898DAAAE5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerAuthorBooks.Infra", "ManagerAuthorBooks.Infra\ManagerAuthorBooks.Infra.csproj", "{3A6DCA8C-048F-411A-B1FC-C4898DAAAE5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerAuthorBooks.Tests", "ManagerAuthorBooks.Tests\ManagerAuthorBooks.Tests.csproj", "{A6E62327-77D2-4F3B-9F56-47FF696CC9B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerAuthorBooks.Tests", "ManagerAuthorBooks.Tests\ManagerAuthorBooks.Tests.csproj", "{A6E62327-77D2-4F3B-9F56-47FF696CC9B8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A4143885-D945-413B-B6B7-B325156F1222}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{A6E62327-77D2-4F3B-9F56-47FF696CC9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6E62327-77D2-4F3B-9F56-47FF696CC9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6E62327-77D2-4F3B-9F56-47FF696CC9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4143885-D945-413B-B6B7-B325156F1222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4143885-D945-413B-B6B7-B325156F1222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4143885-D945-413B-B6B7-B325156F1222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4143885-D945-413B-B6B7-B325156F1222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

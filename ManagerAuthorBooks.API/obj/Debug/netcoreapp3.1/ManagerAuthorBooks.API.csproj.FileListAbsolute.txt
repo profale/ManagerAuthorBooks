@@ -154,6 +154,7 @@ D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorB
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Redis.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -171,6 +172,7 @@ D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorB
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\@Estudos\profale\Worthix\ManagerAuthorBooks\ManagerAuthorBooks\ManagerAuthorBooks.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -38,7 +38,7 @@ namespace ManagerAuthorBooks.Infra.Repositories
 
         public async Task<IEnumerable<Books>> GetAll()
         {
-            return await _context.Books.AsNoTracking().ToListAsync();
+            return await _context.Books.AsNoTracking().Include(b => b.Author).ToListAsync();
         }
 
     }

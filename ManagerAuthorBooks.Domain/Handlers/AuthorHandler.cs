@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Flunt.Notifications;
+using ManagerAuthorBooks.Domain.Cache.Contract;
 using ManagerAuthorBooks.Domain.Commands;
 using ManagerAuthorBooks.Domain.Commands.AuthorCommands;
 using ManagerAuthorBooks.Domain.Commands.Contracts;
@@ -20,13 +21,16 @@ namespace ManagerAuthorBooks.Domain.Handlers
         private readonly IAuthorRepository _authorRepository;
         private IMediatorHandler _bus;
         private readonly IMapper _mapper;
-        
+        private readonly ICacheService _cache;
+        private const string key_author = "Author:{id}";
 
-        public AuthorHandler(IAuthorRepository authorRepository, IMapper mapper, IMediatorHandler bus)
+
+        public AuthorHandler(IAuthorRepository authorRepository, IMapper mapper, IMediatorHandler bus, ICacheService cache)
         {
             _authorRepository = authorRepository;
             _mapper = mapper;
             _bus = bus;
+            _cache = cache;
         }
 
         public ICommandResult Handle(CreateAuthorCommand command)
@@ -43,6 +47,11 @@ namespace ManagerAuthorBooks.Domain.Handlers
 
             //Send message to queue
             _bus.Enqueue(command, CreateAuthorCommand.QueueName);
+
+            //Cache
+            var key = key_author.Replace("{id}", author.Id.ToString());
+
+            _cache.Save(command, key);
 
             return new GenericCommandResult(true, $"The Author {author.Name} was save with success", author);
         }
