@@ -27,6 +27,7 @@ using ManagerAuthorBooks.Domain.Queries.Contracts;
 using ManagerAuthorBooks.Domain.Queries;
 using ManagerAuthorBooks.Domain.Cache.Contract;
 using ManagerAuthorBooks.Domain.Cache;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace ManagerAuthorBooks.API
 {
@@ -93,10 +94,14 @@ namespace ManagerAuthorBooks.API
 
             var logger = loggerFactory.CreateLogger<Program>();
             logger.LogInformation("######################################################################################");
-            logger.LogInformation("#### Executando o método Configure() ####" + DateTime.Now.ToLongDateString());
+            logger.LogInformation("#### Executando o mï¿½todo Configure() ####" + DateTime.Now.ToLongDateString());
             logger.LogInformation("######################################################################################");
 
             app.UseHttpsRedirection();
+            //app.UseForwardedHeaders(new ForwardedHeadersOptions
+            //{
+            //    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            //});
 
             app.UseRouting();
 

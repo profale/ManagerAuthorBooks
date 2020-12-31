@@ -76,6 +76,11 @@ namespace ManagerAuthorBooks.Domain.Handlers
             //Send message to queue
             _bus.Enqueue(command, UpdateAuthorCommand.QueueName);
 
+            //Cache
+            var key = key_author.Replace("{id}", author.Id.ToString());
+
+            _cache.Save(author, key);
+
             return new GenericCommandResult(true, $"The author {author.Name} has been updated successfully", author);
         }
     }

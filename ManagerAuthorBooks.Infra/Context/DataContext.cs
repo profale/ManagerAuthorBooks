@@ -3,6 +3,7 @@ using ManagerAuthorBooks.Infra.Mappings;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 
 namespace ManagerAuthorBooks.Infra.Context
@@ -18,6 +19,7 @@ namespace ManagerAuthorBooks.Infra.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //optionsBuilder.UseSqlServer("Server=db;Database=ManageAuthorBooks;User=sa;Password=Teste12345678;");
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging(true);
             

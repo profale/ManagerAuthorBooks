@@ -8,7 +8,7 @@ services:
     managerauthorbooks.api:
         image: ${DOCKER_REGISTRY-}managerauthorbooksapi
         depends_on:
-            - sql-server-db
+            - db
         build:
             context: .
             dockerfile: Dockerfile
@@ -16,18 +16,46 @@ services:
             - "9002:80"
             - "443:443"
         environment:      
-            DB_CONNECTION_STRING: "Server=sql-server-db;Database=ManageAuthorBooks;User=sa;Password=teste@123;"
             ASPNETCORE_ENVIRONMENT: "Development"
         networks:
             - product_manager-dev
-
-    sql-server-db:
-        image: mcr.microsoft.com/mssql/server:2017-latest
+        volumes:
+            - ./https/aspnetapp.pfx:/https/aspnetapp.pfx:ro
+    db:
+        build: 
+            context: .
+            dockerfile: sqlserver.dockerfile
         ports:
-            - "1433:1433"
-        container_name: projectauthorbooks
-        environment:
-            ACCEPT_EULA: Y
-            SA_PASSWORD: teste@123
+            - "15789:1433"
+        env_file: sqlserver.env
+        volumes: 
+            - sqldata:/var/opt/sqlserver/data
+            - sqllog:/var/opt/sqlserver/log
+            - sqlbackup:/var/opt/sqlserver/backup
         networks:
-            - product_manager-dev 
+            - product_manager-dev
+
+    broker-local:
+        image: rabbitmq:3-management-alpine
+        environment:
+            RABBITMQ_DEFAULT_USER: "testes"
+            RABBITMQ_DEFAULT_PASS: "RabbitMQ2019!"
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        volumes:
+            - ./cert_rabbitmq:/cert_rabbitmq
+        networks:
+            - product_manager-dev
+
+    redisheroismarvel:
+        image: redis
+        command: redis-server --requirepass Redis2019!
+        ports:
+          - "6379:6379"
+        networks:
+          - product_manager-dev
+volumes:
+    sqldata:
+    sqllog:
+    sqlbackup:

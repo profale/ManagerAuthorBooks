@@ -1,4 +1,5 @@
 ﻿using ManagerAuthorBooks.Domain.Cache.Contract;
+using ManagerAuthorBooks.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,19 +9,26 @@ namespace ManagerAuthorBooks.Domain.Cache
 {
     public class CacheService : ICacheService
     {
-        public Task Save<T>(T obj, string key, int expirationTimeInMinutes = 5)
+        private ICacheRepository _cacheRepository;
+
+        public CacheService(ICacheRepository cacheRepository)
         {
-            throw new NotImplementedException();
+            _cacheRepository = cacheRepository;
         }
 
-        public Task<T> Get<T>(string key)
+        public async Task Save<T>(T obj, string key, int expirationTimeInMinutes = 5)
         {
-            throw new NotImplementedException();
+            await _cacheRepository.Save(obj, key, expirationTimeInMinutes);
         }
 
-        public Task Remove(string key)
+        public async Task<T> Get<T>(string key)
         {
-            throw new NotImplementedException();
+            return await _cacheRepository.Get<T>(key);
+        }
+
+        public async Task Remove(string key)
+        {
+            await _cacheRepository.Remove(key);
         }
     }
 }

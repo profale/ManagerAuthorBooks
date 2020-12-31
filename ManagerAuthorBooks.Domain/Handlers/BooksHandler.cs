@@ -4,12 +4,13 @@ using ManagerAuthorBooks.Domain.Commands;
 using ManagerAuthorBooks.Domain.Commands.BooksCommands;
 using ManagerAuthorBooks.Domain.Commands.Contracts;
 using ManagerAuthorBooks.Domain.Entities;
+using ManagerAuthorBooks.Domain.Handlers.Contracts;
 using ManagerAuthorBooks.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ManagerAuthorBooks.Domain.Handlers.Contracts
+namespace ManagerAuthorBooks.Domain.Handlers
 {
     public class BooksHandler : Notifiable,
         IHandler<CreateBooksCommand>,

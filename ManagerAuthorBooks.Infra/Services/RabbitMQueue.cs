@@ -11,15 +11,14 @@ namespace ManagerAuthorBooks.Infra.Services
 {
     public class RabbitMQueue : IMediatorHandler
     {
-        private readonly string _connectionString;
         public void Enqueue<T>(T command, string queueName)
         {
             var factory = new ConnectionFactory()
             {
-                HostName = "",
-                Port = 0,
-                UserName = "",
-                Password = ""
+                HostName = "broker-local",
+                Port = 5672,
+                UserName = "testes",
+                Password = "RabbitMQ2019!"
             };
 
             using (var connection = factory.CreateConnection())

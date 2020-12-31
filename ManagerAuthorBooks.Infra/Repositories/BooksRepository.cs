@@ -33,7 +33,7 @@ namespace ManagerAuthorBooks.Infra.Repositories
 
         public async Task<Books> GetById(Guid id)
         {
-            return await _context.Books.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Books.Include(b => b.Author).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<Books>> GetAll()

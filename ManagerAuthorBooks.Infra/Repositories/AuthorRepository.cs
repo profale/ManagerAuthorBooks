@@ -33,12 +33,12 @@ namespace ManagerAuthorBooks.Infra.Repositories
 
         public async Task<Author> GetById(Guid id)
         {
-            return await _context.Authors.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Authors.AsNoTracking().Include(a => a.Books).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<Author>> GetAll()
         {
-            return await _context.Authors.AsNoTracking().ToListAsync();
+            return await _context.Authors.AsNoTracking().Include(a => a.Books).ToListAsync();
         }
 
     }
