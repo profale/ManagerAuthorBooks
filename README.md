@@ -1,5 +1,5 @@
 # ManagerAuthorBooks
-<h2>Pojeto de gerenciamento de livros</h2>
+Projeto de gerenciamento de livros
 
 ### 🎲 Rodar o projeto usando o docker
 
@@ -21,6 +21,7 @@ $ docker-compose up --force-recreate
 # Para visualizar a fila no RabbitMQ - acesse <http://localhost:15672>
 # Login e senha do RabbitMQ estão no arquivo docker-compose.yml
 
+
 ### 🛠 Implementações utilizadas
 
 - [Docker]
@@ -34,3 +35,4 @@ $ docker-compose up --force-recreate
 - [Testes]
 - [Logger]
 - [FluntValidation]
+
