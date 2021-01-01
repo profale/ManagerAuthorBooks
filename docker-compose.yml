@@ -48,7 +48,7 @@ services:
         networks:
             - product_manager-dev
 
-    redisheroismarvel:
+    rediscache:
         image: redis
         command: redis-server --requirepass Redis2019!
         ports:
