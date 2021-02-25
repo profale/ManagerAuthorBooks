@@ -15,13 +15,23 @@ namespace ManagerAuthorBooks.API.Configurations
             //services.AddAutoMapper(typeof(Startup));
             ////services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             ////.AddAutoMapper(typeof(ManagerAuthorBooks.API), typeof(ManagerAuthorBooks.Domain));
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
+            //var mappingConfig = new MapperConfiguration(mc =>
+            //{
+            //    mc.AddProfile(new MappingProfile());
+            //});
+            // Can also use assembly names:
+            var configuration = new MapperConfiguration(cfg =>
+                cfg.AddMaps(new[] {
+                                    "ManagerAuthorBooks.API",
+                                    "ManagerAuthorBooks.Domain",
+                                    "ManagerAuthorBooks.Infra",
+                                    "ManagerAuthorBooks.Tests"
+                                  })
+                );
+            
 
 
-            IMapper mapper = mappingConfig.CreateMapper();
+            IMapper mapper = configuration.CreateMapper();
             services.AddSingleton(mapper);
         }
     }

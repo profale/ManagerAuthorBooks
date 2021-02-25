@@ -29,5 +29,12 @@ namespace ManagerAuthorBooks.Tests.CommandTests
         {
             Assert.AreEqual(_validCommand.Valid, true);
         }
+
+        [TestMethod]
+        public void Dado_um_documento_invalido()
+        {
+
+            Assert.Fail();
+        }
     }
 }

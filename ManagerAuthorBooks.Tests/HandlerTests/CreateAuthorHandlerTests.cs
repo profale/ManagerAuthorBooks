@@ -27,6 +27,10 @@ namespace ManagerAuthorBooks.Tests.HandlerTests
         private readonly ICacheService _cache;
         private GenericCommandResult _result = new GenericCommandResult();
 
+        public CreateAuthorHandlerTests()
+        {
+
+        }
         public CreateAuthorHandlerTests(IMapper mapper, IMediatorHandler bus, ICacheService cache)
         {
             _mapper = mapper;

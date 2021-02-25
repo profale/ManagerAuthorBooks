@@ -41,7 +41,7 @@ namespace ManagerAuthorBooks.Domain.Handlers
                 return new GenericCommandResult(false, "An error occurred while saving the requested record", command.Notifications);
 
             var author = _mapper.Map<CreateAuthorCommand,Author>(command);
-
+                    
             //Save the Database
             _authorRepository.Create(author);
 
